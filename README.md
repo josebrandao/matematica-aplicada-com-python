@@ -1,7 +1,6 @@
 # Algoritmos e Matemática Aplicada em Python
 
-Este repositório contém implementações de algoritmos matemáticos e estatísticos, como Monte Carlo, regressão linear e outros temas de cálculo e estatística aplicada.
-
+Um repositório com exemplos de como usar Python para resolver problemas matemáticos.
 ## Como usar:
 1. Clone o repositório.
 2. Execute os scripts Python para testar os algoritmos.
