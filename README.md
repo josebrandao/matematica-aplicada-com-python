@@ -7,4 +7,5 @@ Um repositório com exemplos de como usar Python para resolver problemas matemá
 
 ## Algoritmos:
 - Monte Carlo: Estimativa de π.
+- <img src="https://github.com/josebrandao/matematica-aplicada-com-python/blob/main/monte-carlos-algorithm.PNG">
 - Regressão Linear: Ajuste de linha aos dados.
