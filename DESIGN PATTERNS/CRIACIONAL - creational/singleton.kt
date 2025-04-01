@@ -7,3 +7,8 @@ object Singleton {
         println("Olá do Singleton!")
     }
 }
+
+fun main() {
+    // Usando diretamente o Singleton, não é necessário getInstance()
+    Singleton.showMessage()
+}
