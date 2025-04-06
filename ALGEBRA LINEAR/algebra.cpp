@@ -1,35 +1,24 @@
-#include <SFML/Graphics.hpp>
+#include <iostream>
+#include <fstream>
 
 int main() {
-    // Criando a janela
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Olá, Mundo!");
+    // Vetores 2D (exemplo)
+    float v1_x = 2.0, v1_y = 1.0;
+    float v2_x = -1.0, v2_y = 3.0;
 
-    // Criando um texto com a mensagem
-    sf::Font font;
-    if (!font.loadFromFile("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")) {
-        return -1;  // Se não conseguir carregar a fonte, retorna com erro
+    // Salvar em CSV
+    std::ofstream arquivo("vetores.csv");
+    if (!arquivo.is_open()) {
+        std::cerr << "Erro ao criar o arquivo CSV.\n";
+        return -1;
     }
 
-    sf::Text text("Olá, Mundo!", font, 50);  // Texto com tamanho 50
-    text.setFillColor(sf::Color::Green);  // Cor do texto
+    arquivo << "x,y\n";  // Cabeçalho
+    arquivo << v1_x << "," << v1_y << "\n";
+    arquivo << v2_x << "," << v2_y << "\n";
 
-    // Loop principal
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
-                window.close();  // Fecha a janela quando o evento de fechamento for disparado
-        }
+    arquivo.close();
 
-        // Limpar a tela
-        window.clear();
-
-        // Desenha o texto na janela
-        window.draw(text);
-
-        // Exibe o conteúdo na tela
-        window.display();
-    }
-
+    std::cout << "Vetores salvos em vetores.csv\n";
     return 0;
 }
