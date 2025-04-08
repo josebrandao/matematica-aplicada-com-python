@@ -2,7 +2,7 @@
 setlocal
 
 REM Caminho para o MinGW (ajuste se estiver diferente)
-set MINGW_DIR=C:\2\msys64\mingw64\bin
+set MINGW_DIR=C:\2\mingw\bin
 
 echo Adicionando MinGW ao PATH do usuário...
 setx PATH "%PATH%;%MINGW_DIR%"
